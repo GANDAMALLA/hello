@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+	var obj={};
+	var output=" "+ typeof obj;
+	console.log(output);
+	
+
+	//adding properties
+	var employee={}
+	employee.name="vinay";
+	employee.designation="teamlead";
+	console.log(employee);
+	
+
+	//retrieving properties of objects
+	var empName=employee.name;
+	output="EmpName:" +empName;
+	console.log(output);
+	
+
+	//declaring object literals
+	var employee1={
+		name:'john',
+		age:40,
+		designation:"manager",
+		50:"something"
+	}
+	console.log(employee1);
+	
+
+	//Access existing properties
+	console.log(employee1.name);
+	
+
+	//access non existing properties
+	console.log(employee1.salary);//undifined
+
+
+	//usage of dot and []notations
+	output=employee1["name"];
+	console.log(output);
+	
+
+	// use of []notation where dot is not used for invalid identifiers
+	output=employee1["50"]	;
+	console.log(output);
+
+
+	//use of [] notatiob for accessing dynamic
+	var emp={
+		name:"abc",
+		age:40
+	};
+	var myname="age";// dynamic value
+	//output=emp.name;
+	output=emp[myname];
+	console.log(output);
+
+
+	//nested objects creation
+	var student={
+		name:"vinay",
+		age:25,
+		group:"Bsc",
+		address:{
+			city:"Hyderabad",
+			state:"Telangana",
+			country:"India"
+		}
+	};
+
+
+	//accessing them using dot notation
+	output=student.address.city;
+	console.log(output);
+	
+
+	//accessing them using mix of dot and []
+
+	output=student.address["state"];
+	console.log(output);
+	
+
+	//Add some properties to nested object and access them
+	student.address.street="Ameerpet";
+	output=student.address.street;
+	console.log(output);
+
+
+	// === operator demo for object(if pointing to same location in memory)
+	var student1={
+		name:'abc',
+		age:25
+	}
+	var student2={
+		name:'abc',
+		age:25
+	}
+	student2=student1;
+	if(student1===student2)
+	{
+		output="Both are equal";
+		console.log(output);
+	}
+	else{
+		output="Both are not equal";
+		console.log(output);
+
+	
+	}
+</script>
+</html>

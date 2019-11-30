@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Closure</title>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+	function addNumbers(FirstNumber,SecondNumber)
+	{
+		var returnvalue="Result is:";
+		function add()
+		{
+			return returnvalue+(FirstNumber+SecondNumber);
+		}
+		return add();
+	}
+	var result=addNumbers(10,20);
+	document.write(result);
+</script>
+</html>
